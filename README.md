@@ -1,5 +1,5 @@
 # Coldfusion: pythonforword
-Is nothing more than a service to use within applications wich generates a Word-document with the use of a template-file.
+Is a service to use within applications which generates a Word-document with the use of a template-file.
 
 **NOTE: all done on a Windows machine.**
 
@@ -10,13 +10,12 @@ After installing Python, install two depencies: 'docx' and 'docxtpl'. In order t
 
 ``` bash
 pip install docx
-
 pip install docxtpl
 ```
 That's it.
 
 ## How to use
-The service has 2 public functions: 'init' and 'genWordDoc'.
+The service has two public functions: 'init' and 'genWordDoc'.
 
 The 'init' function is to setup all required settings before running 'genWordDoc'.
 
@@ -25,3 +24,15 @@ The 'init' function is to setup all required settings before running 'genWordDoc
 It's important to run the 'init' first.
 
 After running 'init', copy 'demo.docx' into the 'wordtemplates' directory which just have been created. Now you can run 'genWordDoc'.
+
+## 'genWordDoc explained'
+This function recieves four arguments: 'jsonfile', 'downloadfile', 'docStruct' and 'templatefile'.
+
+
+How to use
+``` bash
+jsonfile: to give the json-file name, wich will be saved.
+downloadfile: whether to download the just generated Word-document.
+docStruct: all the variables needed whitin the templatefile; this can be either a structure or a serialized structure.
+templatefile: stringinput wich templatefile to use; default 'demo.docx'.
+```
