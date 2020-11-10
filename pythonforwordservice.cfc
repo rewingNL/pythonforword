@@ -1,6 +1,6 @@
 component accessors="true" output="false" {
 
-	public any function init(string pythonExePath='C:\_docs\python3') {
+	public any function init(string pythonExePath='<path to Python>') {
 		// actual path 2 python
 		variables.pythonPath = arguments.pythonExePath;
 
