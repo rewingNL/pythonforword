@@ -1,4 +1,4 @@
-# Codfusion: pythonforword
+# Coldfusion: pythonforword
 Is nothing more than a service to use within applications wich generates a Word-document with the use of a template-file.
 
 **NOTE: all done on a Windows machine.**
