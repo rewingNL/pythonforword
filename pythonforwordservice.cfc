@@ -1,7 +1,7 @@
 component accessors="true" output="false" {
 
-	public any function init(string pythonExePath='<path to Python>') {
-		// actual path 2 python
+	public any function init(required string pythonExePath='') {
+		// actual path 2 python; argument must be filled
 		variables.pythonPath = arguments.pythonExePath;
 
 		// place where to put all files 4 python
