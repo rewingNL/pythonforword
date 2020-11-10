@@ -25,5 +25,3 @@ The 'init' function is to setup all required settings before running 'genWordDoc
 It's important to run the 'init' first.
 
 After running 'init', copy 'demo.docx' into the 'wordtemplates' directory which just have been created. Now you can run 'genWordDoc'.
-
-## Explanation 'genWordDoc'
