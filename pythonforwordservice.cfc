@@ -1,5 +1,9 @@
 component accessors="true" output="false" {
 
+	/**
+	 * @Hint: Initial setup for creating the necessary directories and python-script
+	 * @param pythonExePath: path to the Python directory
+	*/
 	public any function init(required string pythonExePath='') {
 		// actual path 2 python; argument must be filled
 		variables.pythonPath = arguments.pythonExePath;
@@ -25,6 +29,13 @@ component accessors="true" output="false" {
 		return this;
 	}
 
+	/**
+	 * @Hint: Generates Word-document
+	 * @param jsonFile: name of the json file wich will temporarily be saved.
+	 * @param downloadfile: yes or no downloading document; default false
+	 * @param docStruct: structure holding all variables for filleing the tmplatefile
+	 * @param templatefile: word-document holding all variables to fill
+	*/
 	public boolean function genWordDoc(string jsonFile="test", boolean downloadfile=false, any docStruct, string templatefile) hint="generating Word-documents with Python 3" {
 		param name="arguments.docStruct" default={ "text": "Hello World" };
 		param name="arguments.templatefile" default="demo.docx";
@@ -66,6 +77,10 @@ component accessors="true" output="false" {
 	}
 
 
+	/**
+	 * @Hint: Python-script wich will be running to generate the Word=document
+	 * @param fileName: name for the python-file
+	*/
 	private string function createPythonFile(string fileName='generateWordDoc') {
 		var fileName = arguments.fileName&'.py';
 		var pythonFile = variables.pythonFilePath&'\'&fileName;
