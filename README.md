@@ -27,9 +27,6 @@ After running 'init', copy 'demo.docx' into the 'wordtemplates' directory which 
 
 ## 'genWordDoc explained'
 This function recieves four arguments: 'jsonfile', 'downloadfile', 'docStruct' and 'templatefile'.
-
-
-How to use
 ``` bash
 jsonfile: to give the json-file name, wich will be saved.
 downloadfile: whether to download the just generated Word-document.
