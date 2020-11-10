@@ -78,7 +78,7 @@ component accessors="true" output="false" {
 
 
 	/**
-	 * @Hint: Python-script wich will be running to generate the Word=document
+	 * @Hint: Python-script wich will be running to generate the Word-document
 	 * @param fileName: name for the python-file
 	*/
 	private string function createPythonFile(string fileName='generateWordDoc') {
