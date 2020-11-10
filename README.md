@@ -16,3 +16,10 @@ pip install docxtpl
 That's it.
 
 ## How to use
+The service has 2 public functions: 'init' and 'genWordDoc'.
+
+The 'init' function is to setup all required settings before running 'genWordDoc'.
+
+**NOTE: change the argument 'pythonExePath' with the actual path to Python** 
+
+It's important to run the 'init' first.
