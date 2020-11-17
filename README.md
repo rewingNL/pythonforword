@@ -1,7 +1,7 @@
 # Coldfusion: pythonforword
 Is a service to use within applications which generates a Word-document with the use of a template-file.
 
-**NOTE: all done on a Windows machine.**
+**NOTE: all done on a Windows machine with Lucee 5.2.9.31 server.**
 
 ## What you need to do to get it 'up and running'?
 First of all you have to install Python on your machine. In this case I installed Python 3.8.5.
