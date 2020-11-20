@@ -75,29 +75,25 @@ component accessors="true" output="false" {
 				} catch(any a) {
 					var strError = '<strong>NOTE: '&lcase(a.Message)&'</strong><br /><em>'&a.Detail&'</em><br />';
 					writeOutput(strError);
-				} finally {
-					writeOutput('process is stopped...');
 				}
-			}
-
-			// download the generated word-document
-			if (arguments.downloadfile) {
-				var downloadPath = variables.wordSavedFilePath&"/"&fileName;
-				cfheader(name='Content-Type', value='attachment;filename="#fileName#"');
-				cfcontent(file='#downloadPath#', reset='true', type='rc.filetType');
 			}
 
 			// delete both .json and .bat file
 			fileDelete(jsonFileLocal);
 			fileDelete(execFile);
 
+			// download the generated word-document
+			if (arguments.downloadfile) {
+				var downloadPath = variables.wordSavedFilePath&"/"&fileName;
+				cfheader(name='Content-Disposition', value='attachment; filename=#fileName#');
+				cfcontent(file='#downloadPath#', reset='true', type='application/msword');
+			}
 			return true;
 		}
 		else {
 			return false;
 		}
 	}
-
 
 	/**
 	 * @Hint: Python-script wich will be running to generate the static Word-document
